@@ -1,0 +1,8 @@
+.drawer-side a.active{
+    color: rgb(231, 224, 224) !important;
+    background-color: #252e38 !important;
+}
+.drawer-side a:hover{
+    background-color: #e4e4e4 !important;
+    color: #222831 !important;
+}

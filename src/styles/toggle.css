@@ -1,0 +1,12 @@
+.dark {
+    --bg: #111;
+    --text: #fff;
+  }
+  
+  .dark .bg-primary {
+    background-color: var(--bg);
+  }
+  
+  .dark .text-primary {
+    color: var(--text);
+  }

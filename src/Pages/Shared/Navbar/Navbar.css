@@ -1,0 +1,4 @@
+.navbar li a.active{
+    background-color: #ddd;
+    color: black;
+}

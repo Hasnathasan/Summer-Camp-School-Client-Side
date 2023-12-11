@@ -1,12 +1,12 @@
 import useEnrolledClasses from "../../../../Hooks/useEnrolledClasses";
 import Loader from "../../../../Components/Loader";
 import useAuth from "../../../../Hooks/useAuth";
-import {  Card,  Chip,  Typography } from "@material-tailwind/react";
+import { Card, Chip, Typography } from "@material-tailwind/react";
 const EnrolledClasses = () => {
   const { user } = useAuth();
-    const [enrolledClasses, isEnrolledClassesLoading] = useEnrolledClasses();
-    return (
-        <div className="w-[90%]">
+  const [enrolledClasses, isEnrolledClassesLoading] = useEnrolledClasses();
+  return (
+    <div className="w-[90%]">
       {user && !isEnrolledClassesLoading ? (
         <Card className="overflow-auto h-full w-full">
           <table className="w-full min-w-max table-auto text-left">
@@ -132,7 +132,12 @@ const EnrolledClasses = () => {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        <Chip className="w-max" variant="ghost" color="green" value="Enrolled" />
+                        <Chip
+                          className="w-max"
+                          variant="ghost"
+                          color="green"
+                          value="Enrolled"
+                        />
                       </Typography>
                     </td>
                   </tr>
@@ -145,7 +150,7 @@ const EnrolledClasses = () => {
         <Loader></Loader>
       )}
     </div>
-    );
+  );
 };
 
 export default EnrolledClasses;

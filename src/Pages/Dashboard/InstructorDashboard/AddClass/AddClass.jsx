@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 
 const AddClass = () => {
-  const [axiosSecure] = useAxiosSecure()
+  const [axiosSecure] = useAxiosSecure();
   const {
     register,
     handleSubmit,
@@ -34,23 +34,26 @@ const AddClass = () => {
       total_students: 0,
     };
 
-    axiosSecure.post('/classes', newClass)
-        .then(data => {
-            if(data.data.insertedId){
-                reset()
-                Swal.fire(
-                    'Class Added',
-                    'It will visible to students if Admin approved id',
-                    'success'
-                  )
-            }
-        })
-
+    axiosSecure.post("/classes", newClass).then((data) => {
+      if (data.data.insertedId) {
+        reset();
+        Swal.fire(
+          "Class Added",
+          "It will visible to students if Admin approved id",
+          "success"
+        );
+      }
+    });
   };
   return (
     <div className="w-full">
-      <form onSubmit={handleSubmit(onSubmit)} className="w-[90%] mx-auto card bg-white shadow-lg p-10">
-        <h2 className="text-3xl font-bold text-slate-500 mb-4 text">Add a new Class</h2>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-[90%] mx-auto card bg-white shadow-lg p-10"
+      >
+        <h2 className="text-3xl font-bold text-slate-500 mb-4 text">
+          Add a new Class
+        </h2>
         <div className="grid gap-4 items-center justify-center sm:grid-cols-2 sm:gap-6">
           <div className="">
             <label

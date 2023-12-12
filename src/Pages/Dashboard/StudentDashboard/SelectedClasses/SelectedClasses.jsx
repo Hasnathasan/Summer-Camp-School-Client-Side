@@ -146,9 +146,10 @@ const SelectedClasses = () => {
                         <FaTrash></FaTrash>
                       </IconButton>
                       <Link to={`/dashboard/payment/${_id}`}>
-                      <Button className="flex items-center gap-3">
-                        <FaRegCreditCard></FaRegCreditCard>Pay
-                      </Button></Link>
+                        <Button className="flex items-center gap-3">
+                          <FaRegCreditCard></FaRegCreditCard>Pay
+                        </Button>
+                      </Link>
                     </td>
                   </tr>
                 )
